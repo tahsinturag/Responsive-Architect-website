@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.work-sans-font {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+/* shared styles */
+.display-flex{
+    display: flex;
+}
+
+/* dark-2 */
+.text-gray{
+    color: #424242;
+}
+/* dark-3 */
+.text-light-gray{
+    color: #727272;
+}
+
+.bg-light{
+    background-color: rgba(255, 144, 14,0.1);
+}
+
+/* lec-3 */
+.btn-primary{
+    background-color: #FF900E;
+    color: white;
+    padding: 20px 25px; /* upore niche 20 px, daane bame 25px */
+    font-size: 1.25rem; /* around 20px ;     /* 16px e 1 rem */
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+}
+.text-primary{
+    color: #FF900E;
+}
+
+/* header styles */
+
+/* navbar related styles */
+.navbar{
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+} 
+
+.nav-item{
+    list-style: none;
+    margin-right: 30px;
+} 
+
+.nav-link{
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar, .banner{
+    max-width: 1440px;
+    margin: 0 auto;
+    /*  upore niche 0, daane baame vagavagi */
+}
+
+/* lec-3,4 */
+.brand{
+    font-weight: 700;  /*bold*/
+    font-size: 3rem;
+    /* 16px e 1 rem */
+}
+
+/* banner related styles */
+.banner-content{
+    max-width: 850px;
+    margin:0 auto;
+    text-align: center;
+    margin-bottom: 50px;  /*  banner and image er mddhe gap dyar jnno */
+}
+.banner-title{
+    font-weight: 700;
+    font-size: 4rem;
+}
+/* banner responsive korar jnno */
+.banner-img{
+    width: 100%;
+}
+
+/* team and features related styles */
+.teams{
+    align-items: center;
+}
+.team-img-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr); /* 2ta kore repeat korbo, 1 fraction */
+    gap: 24px;
+}
+.our-features{
+    margin-left: 130px;
+    max-width: 530px;
+}
+.section-title{
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+#quick-list{
+    font-weight: 700;
+}
+
+main{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+main > section{
+    margin-top: 130px;
+}
+
+
+/* facts related styles */
+.fact-description{
+    max-width: 540px;
+}
+.facts-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+.fact-card{
+    border: 1px solid #FF900E;
+    height: 240px;
+    width: 240px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* horizontal vertical centre korsi */
+    /* margin padding diyew kora zaito */
+}
+
+.fact-number{
+    font-size: 2.8rem; /* 45px */
+    font-weight: 600; /* semibold */
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.fact-name{
+    font-size: 1.25rem; /* 20px */
+    font-weight: 600;
+    margin-top: 10px;
+}
+/* sponsor related styles */
+.sponsor-info{
+    max-width: 540px;
+    margin: 50px auto;   /* upore niche 50 px, daane bame auto */
+    text-align: center;
+}
+.sponsor-companies{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.sponsor-companies>img{
+    filter: grayscale(100%);
+}
+
+/* feature you love and enjoy section related styles */
+
+.features{
+    gap: 140px;
+}
+#feature-section-title{
+    border-left: 5px solid #FF900E;
+    padding-left: 20px;
+}
+.feature-card{
+    padding: 30px;
+    box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
+    /* x axis e 0, y axis 4, blur 30, spread 0 then colour*/
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+.feature-card .feature-title{ /* feature-card er mddhe ze feature-title ta ache seta */
+    font-weight:600; /* semibold */
+    font-size: 1.25rem; /* 20px */
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.featured-architect img{
+    width: 100%;
+}
+#experienc-badge{
+    padding: 45px 42px; /* upore niche 45px, daane baaame 42px */
+    font-size: 1.5rem;
+    font-weight: 500;  /* 24px and medium */
+    margin-left: -100px;
+    margin-top: -100px;
+}
+#experienc-year{
+    font-size: 4rem;
+    font-weight: 700;
+}
+/* minimum breakpoint responsive media query */
+/* for small device */
+@media screen and (max-width: 576px) {
+    .navbar, 
+    .nav-link,
+    .teams,
+    .features{
+        flex-direction: column;
+        
+        /* zekhane zekahne display-flex marsi tar flex-direction column kore dibo */
+    }
+    .team-img-container,
+    .facts-container,
+    .sponsor-companies{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .facts-container,
+    .sponsor-companies{
+        justify-items: center;
+        gap: 24px;
+    }
+    
+    .our-features{
+        margin-left: 20px;
+    }
+    #experienc-badge{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+}
+
+/* for medium size device */
+@media screen and (min-width: 576px) and (max-width: 992px){
+    
+    .teams,
+    .features{
+        flex-direction: column;
+    }
+   
+    
+    .our-features{
+    /* margin-left: 50px; */
+    margin: 50px auto;
+    }
+    .sponsor-companies,
+    .facts-container{
+        /* display: grid; already main jaygay ekbar likhsi*/
+        grid-template-columns: repeat(2,1fr);
+        gap: 50px;
+        justify-items:center ;
+    }
+    #experienc-badge{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+}
